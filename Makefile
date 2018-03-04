@@ -1,4 +1,4 @@
-SRC_PAGES = $(wildcard pages/*)
+SRC_PAGES = $(shell ls -1 pages/* | sort -r)
 DST_PAGES = $(subst pages/,public/,$(subst .md$,.html,$(SRC_PAGES)))
 
 all: public/index.html
